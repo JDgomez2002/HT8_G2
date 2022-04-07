@@ -13,7 +13,7 @@
  * @author Grupo 2
  * @version Paciente Class 1.1
  */
-public class Paciente{
+public class Paciente implements Comparable <Paciente>{
     private int numero_paciente;
     private String nombre;
     private String caso;
@@ -39,8 +39,12 @@ public class Paciente{
      * @return String
      * @version toString 1.1
      */
-    public String toString(){
-        return "Paciente No. "+Integer.toString(this.numero_paciente)+": "+this.nombre+"\nCaso Clinico: "+this.caso+"\nPrioridad: "+this.prioridad;
+    public String toString(boolean atendiendo){
+        String s = "";
+        if(atendiendo){
+            s = "Atendiendo ";
+        }
+        return s+"Paciente No. "+Integer.toString(this.numero_paciente)+": "+this.nombre+"\nCaso Clinico: "+this.caso+"\nPrioridad: "+this.prioridad;
     }
 
     /**
@@ -53,4 +57,21 @@ public class Paciente{
     public String get_prioridad(){
         return this.prioridad;
     }
+
+    public boolean equals(Paciente other){
+        return this.prioridad.equals(other.get_prioridad());
+    }
+
+    public int compareTo(Paciente other){
+        if((this.equals(other))||(this.prioridad.compareTo(other.get_prioridad())==0)){
+            return 0;
+        }
+        else if((this.prioridad.compareTo(other.get_prioridad()))>0){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+
 }

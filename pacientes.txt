@@ -1,0 +1,8 @@
+Juan Perez,fractura de pierna,C
+Maria Ramirez,apendicitis,A
+Lorenzo Toledo,chikunguya,E
+Carmen Sarmientos,dolores de parto,B
+Carlos Martinez,fractura expuesta,A
+Maria Guerra,quemadura de segundo grado,B
+Mario Roca,fractura de tobillo,C
+Alfonso Solorazo,Sika,E
