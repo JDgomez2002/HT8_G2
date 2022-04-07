@@ -32,6 +32,38 @@ public class Paciente implements Comparable <Paciente>{
         this.prioridad = priority;
     }
 
+    /***
+     * Metodo para comparar el Paciente actual y otro
+     * 
+     * @author Grupo 2
+     * @version equals 1.1
+     * @return boolean
+     * @param Paciente
+     */
+    public boolean equals(Paciente other){
+        return this.prioridad.equals(other.get_prioridad());
+    }
+
+    /***
+     * Metodo para poder reconocer la prioridad con PriorityQueue de un objeto
+     * 
+     * @author Grupo 2
+     * @version compareTo 1.1
+     * @return int
+     * @param Paciente
+     */
+    public int compareTo(Paciente other){
+        if((this.equals(other))||(this.prioridad.compareTo(other.get_prioridad())==0)){
+            return 0;
+        }
+        else if((this.prioridad.compareTo(other.get_prioridad()))>0){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+
     /**
      * toString para obtencion de datos
      * 
@@ -57,21 +89,4 @@ public class Paciente implements Comparable <Paciente>{
     public String get_prioridad(){
         return this.prioridad;
     }
-
-    public boolean equals(Paciente other){
-        return this.prioridad.equals(other.get_prioridad());
-    }
-
-    public int compareTo(Paciente other){
-        if((this.equals(other))||(this.prioridad.compareTo(other.get_prioridad())==0)){
-            return 0;
-        }
-        else if((this.prioridad.compareTo(other.get_prioridad()))>0){
-            return 1;
-        }
-        else{
-            return -1;
-        }
-    }
-
 }

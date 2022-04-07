@@ -59,7 +59,7 @@ class Vista{
 
     private Scanner scan = new Scanner(System.in);
 
-    public void enter(){
+    private void enter(){
         System.out.println();
         System.out.print("\tPresione Enter para continuar... ");
         this.scan = new Scanner(System.in);
@@ -235,7 +235,6 @@ class Vista{
         System.out.println("----------------------------------------------------");
         System.out.println();
     }
-    
 }
 
 class FileReader{
