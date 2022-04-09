@@ -20,7 +20,7 @@ public void HeapTheArray(int index){
         int right= left+1;
         //Si el hijo de la izquierda es menor que el de la derecha, se guarda el de la izquierda como el menor
         //No se como arreglar esto :(
-        if(right >= e_array && theheap[left].compareTo(theheap[right]){ 
+        if((right >= e_array) && (theheap[left].compareTo(theheap[right]))){ 
             
             //el código del video:
             /**
